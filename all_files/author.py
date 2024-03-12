@@ -27,7 +27,18 @@ class Author:
     def add_article(self,magazine,title):
         Article.title=title
         Article.magazine=magazine
+        Article.author=Author(self.name) 
+    
+    def topic_areas(self):
+        contributed_articles=[]
+        if Magazine.name==self:
+            contributed_articles.append(Magazine.category)
+        else :return None
 
+Esther=Author("Esther")
+print(Esther.name)
+
+ 
 
        # Author.checksattr(name,self)      
     
