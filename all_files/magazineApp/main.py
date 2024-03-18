@@ -17,7 +17,7 @@ except ValueError as e:
 try: 
   #create an author instance 
   magazine1 = Magazine("money", "Finances")
-  magazine2 = Magazine("Tech", "Progrmme design")
+  magazine2 = Magazine("Technology", "Progrmme design")
   print("Magazine name: " , magazine1.name)
   print("Magazine category: " , magazine1.category)
   # test other methods 
@@ -30,9 +30,9 @@ except ValueError as e:
 try: 
   #create an author instance 
   author2 = Author("Wanjiku")
-  article1 = Article(all_author1, magazine1, "The future of AI")
-  article2 = Article(all_author1, magazine1, "The Daily Tech")
-  article3 = Article(author2,magazine2, "Germination Process")
+  article1 = Article("The future of AI",all_author1, magazine1, )
+  article2 = Article("The Daily Tech",all_author1, magazine1)
+  article3 = Article("Germination Process",author2,magazine2)
   print("Article name: " , article1.title)
   print("Article author: " , article1.author.name)
   print("Article magazine: " , article1.magazine.name)

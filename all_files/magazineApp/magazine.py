@@ -7,7 +7,7 @@ class Magazine:
         self._name=name
         self._category=category
         self._articles=[]#Stores a list of all the articles
-        self._all_magazines.append
+        self._all_magazines.append(self)
     @property
     def name(self):
         return self._name
@@ -48,4 +48,11 @@ class Magazine:
             else:author_counts[author]=1
         my_filtered_authors=[author for author,count in author_counts.items() if count>2 and isinstance(author,Author)]
         return my_filtered_authors
+    
+    @classmethod
+    def top_publisher(cls):
+        if not cls._all_magazines:
+            return None
+        return max(cls._all_magazines,key=lambda magazine:len(magazine.articles()))
+
 from author import Author

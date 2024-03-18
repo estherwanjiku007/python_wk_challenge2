@@ -1,11 +1,11 @@
 class Article:
-    def __init__(self,title,author,magazine) -> None:
-       if not isinstance(title,str) or len(title) <5 or len(title)>50:
-           raise ValueError("Title must be str and btwn 5 and 50 characters ")
+    def __init__(self,title,author,magazine):
+       if not isinstance(title,str) or len(title) < 5 or len(title) > 50:
+            raise ValueError("Title must be a str and btw 5 and 50 characters")
        if not isinstance(author,Author) :
-           raise ValueError("Author must be an insatance of Author")
+           raise ValueError("author must be an instance of Author")
        if not isinstance(magazine,Magazine) :
-           raise ValueError("Author must be an insatance of Author")
+           raise ValueError("Magazine must be an instance of Magazine")
        
        self._title=title
        self._author=author
